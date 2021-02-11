@@ -1,0 +1,44 @@
+{% extends "main/layout.njk" %}
+
+{% block head %}
+    <title>Home | Foodfy</title>
+    <link rel="stylesheet" href="/main/home.css">
+{% endblock %}
+
+{% block filter %}
+<form action="/search" method="GET">
+    <input 
+        type="text" 
+        name="filter"
+        placeholder="Buscar uma receita"
+    >
+    <button type="submit" class="button">Buscar</button>
+</form>
+{% endblock filter %}
+
+{% block content %}
+    <main class="container">
+        <div class="about">
+            <div class="text">
+                <h1>As melhores receitas</h1>
+                <p>
+                    Aprenda a construir os melhores pratos com receitas criadas
+                    por profissionais do mundo inteiro.
+                </p>
+            </div>
+            <div class="chef-image">
+                <img src="/images/chef.png" alt="Imagem do Chef">
+            </div>
+        </div>
+        <h2 class="home-mid-title">Mais acessadas</h2>
+        <div class="recipes">
+            {% for recipe in recipes %}
+            <div class="recipe" id="{{ recipe.id }}">
+                <img src="{{ recipe.image }}" alt="Image {{ recipe.name }}">
+                <h3>{{ recipe.title }}</h3>
+                <p>por {{ recipe.chef_name }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

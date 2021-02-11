@@ -1,0 +1,35 @@
+main section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    column-gap: 24px;
+    row-gap: 30px;
+}
+
+main section .chef {
+    display: grid;
+    grid-template-columns: 64px 176px;
+    align-items: center;
+} 
+
+main section .chef .chef-content {
+    justify-self: center;
+}
+
+main section .chef-content p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+main section .chef-content p:last-child {
+    font-size: 14px;
+    color: #666;
+}
+
+main section img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}

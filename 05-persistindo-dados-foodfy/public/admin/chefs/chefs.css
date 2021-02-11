@@ -1,0 +1,43 @@
+main section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    column-gap: 24px;
+    row-gap: 30px;
+}
+
+main section .chef {
+    display: grid;
+    grid-template-columns: 64px 176px;
+    align-items: center;
+}
+
+main section img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main section .chef .chef-content {
+    margin-left: 20px;
+}
+
+main section .chef .chef-content p {
+    font-weight: 400;
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+main section .chef .chef-content a {
+    font-weight: 700;
+    font-size: 14px;
+    color: #6558C3;
+    text-decoration: none;
+}
+
+main section .chef .chef-content a:hover {
+    color: #240ecc;
+    transition: 200ms;
+}

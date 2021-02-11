@@ -1,0 +1,37 @@
+{% extends 'main/layout.njk' %}
+
+{% block head %}
+    <title>Resultado da busca</title>
+    <link rel="stylesheet" href="/main/results.css">
+{% endblock %}
+
+{% block filter %}
+<form action="/search" method="GET">
+    <input 
+        type="text" 
+        name="filter"
+        placeholder="Buscar uma receita"
+        value={{ filter }}
+    >
+    <button type="submit" class="button">Buscar</button>
+</form>
+{% endblock filter %}
+
+{% block content %}
+<main class="container">
+    <h2>Buscando por "{{ filter }}"</h2>
+    <section>
+        {% for recipe in recipes %}
+        <div class="recipe">
+            <figure>
+                <img src="{{ recipe.image }}" alt="{{ recipe.title}} image">
+            </figure>
+            <div class="recipe-content">
+                <h3>{{ recipe.title }}</h3>
+                <p>por {{ recipe.chef_name }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+{% endblock %}

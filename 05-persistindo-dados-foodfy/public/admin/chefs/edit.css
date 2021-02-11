@@ -1,0 +1,10 @@
+main.container {
+    position: relative;
+}
+
+main.container #form-delete button {
+    position: absolute;
+    top: 0;
+    right: 144px;
+    background-color: #DC4747;
+}
